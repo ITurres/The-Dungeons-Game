@@ -52,7 +52,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: url(/media/images/dungeon-door-index.jpg);
+  background: url(media/images/dungeon-door-index.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
