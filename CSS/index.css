@@ -1,0 +1,178 @@
+@keyframes border-flames {
+  0% {
+    box-shadow: 0 0 2.2rem var(--style-yellow);
+  }
+  25% {
+    box-shadow: 0 0 3rem var(--style-orange);
+  }
+  50% {
+    box-shadow: 0 0 2rem var(--style-red);
+  }
+  75% {
+    box-shadow: 0 0 2.6rem var(--style-orange);
+  }
+  100% {
+    box-shadow: 0 0 1.9rem var(--style-yellow);
+  }
+}
+
+@keyframes fontAwesome-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+:root {
+  --style-yellow: rgb(255, 213, 0);
+  --style-lightorange: rgb(255, 179, 0);
+  --style-orange: rgb(255, 132, 0);
+  --style-red: rgb(255, 0, 0);
+  --dungeon-purple: #4e1b42;
+  --dungeon-orangy: #ffbe55;
+  --dungeon-orange: #ff9c00;
+  --dungeon-red: #971e23;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: clamp(0.5rem, 1.5vw, 2rem);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url(/media/images/dungeon-door-index.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  font-family: "MedievalSharp", "Times New Roman", Times, serif;
+}
+
+.hidden_mQuery_alert {
+  display: none;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+  height: 15rem;
+}
+
+.game_image_holder {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.game__img {
+  transform: rotate(-2deg);
+  width: 30%;
+}
+
+.game_btns_holder {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  align-self: center;
+  padding: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.game__btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  background: var(--dungeon-red);
+  color: var(--dungeon-orange);
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  transition: 0.5s all; /*for hover*/
+  animation: border-flames 9s infinite;
+}
+
+.game__btn:hover {
+  background: var(--dungeon-purple);
+  color: var(--dungeon-orangy);
+  transform: scale(1.1);
+}
+
+.footer {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  color: var(--dungeon-purple);
+  padding: 0.2rem;
+  transition: 0.5s;
+  background-color: transparent;
+}
+
+.footer:hover {
+  color: var(--dungeon-orangy);
+}
+
+@media (max-width: 1200px) {
+  .game__img {
+    width: 20%;
+  }
+
+  .game_btns_holder {
+    width: 80%;
+  }
+
+  .game__btn {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .hidden_mQuery_alert {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 10vh;
+    left: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: antiquewhite;
+    color: var(--dungeon-purple);
+    border-radius: 1rem;
+    height: 70%;
+    width: 80%;
+  }
+
+  .hidden__title {
+    padding: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .fa-arrows-rotate {
+    font-size: 4rem;
+    animation: fontAwesome-rotation 2s infinite ease-in-out;
+  }
+}

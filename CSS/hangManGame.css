@@ -1,0 +1,269 @@
+@keyframes scaling-image-animation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.8);
+  }
+}
+
+@keyframes fontAwesome-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+:root {
+  --dungeon-purple: #4e1b42;
+  --dungeon-orange: #ff9c00;
+  --dungeon-RopeOrangy: #fea910;
+  --dungeon-darkSeaGreen: #1c4849;
+  --dungeon-lightSeaGreen: #3390a1;
+  --dungeon-lightBrown: #ac522f;
+  --dungeon-darkBrown: #600002;
+  --dungeon-cristalLightBlue: #c2ddd8;
+  --dungeon-darkGray: #748187;
+  --dungeon-lightGray: #bad0cb;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: clamp(0.5rem, 1.5vw, 2rem);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url(/media/images/dungeon-bg-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  font-family: "MedievalSharp", "Times New Roman", Times, serif;
+}
+
+.hidden_mQuery_alert {
+  display: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.game_canvas {
+  width: 100%;
+}
+
+.info_user_wrong_carac {
+  align-self: flex-start;
+}
+
+.center_btn_canvas {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* .game_canvas {
+    flex-shrink: 1;
+} */
+
+.new_btn,
+.desist_btn {
+  margin-bottom: 15rem;
+}
+
+.new_btn {
+  margin-left: 4rem;
+}
+
+.desist_btn {
+  margin-right: 4rem;
+}
+
+.game_btn {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5rem;
+  background: var(--dungeon-darkSeaGreen);
+  color: var(--dungeon-RopeOrangy);
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: 0.5s all; /*for hover*/
+}
+
+.game_btn:hover {
+  background: var(--dungeon-RopeOrangy);
+  color: var(--dungeon-darkBrown);
+  transform: scale(1.1);
+}
+
+.win_img,
+.lose_img {
+  display: none;
+  width: 40%;
+  transition: 0.5s;
+  transform: scale(1.8);
+  animation: scaling-image-animation 1.2s ease-in-out;
+}
+
+.lose_img {
+  width: 35%;
+  transition: 0.5s;
+  transform: scale(1.8);
+}
+
+.show_win_message,
+.show_lose_message {
+  position: absolute;
+  top: 15%;
+  left: 38%;
+}
+
+.restarting_progress_bar {
+  display: none;
+  position: absolute;
+  transition: 1s all;
+  transform: rotate(-3deg);
+  transform: scale(1.1);
+  size: 3rem;
+  top: 55%;
+  left: 40%;
+}
+
+progress {
+  border-radius: 0.5rem;
+  width: 20%;
+}
+progress::-webkit-progress-bar {
+  background-color: var(--dungeon-darkSeaGreen);
+  border-radius: 0.5rem;
+}
+progress::-webkit-progress-value {
+  background-color: var(--dungeon-orange);
+  border-radius: 0.5rem;
+}
+
+.to_show_lives {
+  font-size: 2.5rem;
+  color: var(--dungeon-lightSeaGreen);
+  text-shadow: -1px 1px 0 var(--dungeon-darkSeaGreen),
+    2px 2px 0 var(--dungeon-darkSeaGreen),
+    1px -1px 0 var(--dungeon-darkSeaGreen),
+    -1px -1px 0 var(--dungeon-darkSeaGreen);
+  background-color: var(--dungeon-darkGray);
+  padding: 0.6rem 1.1rem;
+  border-radius: 0 0 2rem 2rem;
+  border: 4px solid var(--dungeon-lightGray);
+  position: absolute;
+  bottom: 40%;
+  left: 21%;
+}
+
+/*FOR SHOWING CORRECT CARACS AS TEXT ON BOX*/
+/* .to_show_correct_caracs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border: 2px solid red;
+  top: 70%;
+  left: 25%;
+}
+
+code.correct_caracs {
+  margin-left: 2.7rem;
+  text-align: center;
+  font-size: 3.5rem;
+  letter-spacing: 0.3rem;
+  border: 2px solid limegreen;
+} */
+/*FOR SHOWING CORRECT CARACS AS TEXT ON BOX*/
+
+.to_show_incorrect_caracs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+code.incorrect_caracs {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--dungeon-darkSeaGreen);
+}
+
+.footer {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Times New Roman", Times, serif;
+  color: var(--dungeon-darkSeaGreen);
+  padding: 0.2rem;
+  transition: 0.5s;
+  background-color: transparent;
+}
+
+.footer:hover {
+  color: var(--dungeon-RopeOrangy);
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 1200px) {
+  .game_canvas {
+    width: 70%;
+  }
+
+  .game_btn {
+    font-size: 2rem;
+  }
+
+  code.incorrect_caracs {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .hidden_mQuery_alert {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 10vh;
+    left: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--dungeon-lightGray);
+    color: var(--dungeon-darkSeaGreen);
+    border-radius: 1rem;
+    height: 70%;
+    width: 80%;
+  }
+
+  .hidden__title {
+    padding: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .fa-arrows-rotate {
+    font-size: 4rem;
+    animation: fontAwesome-rotation 2s infinite ease-in-out;
+  }
+}
