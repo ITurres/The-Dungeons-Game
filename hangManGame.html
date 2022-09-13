@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Emanuel Iturres" />
+    <link rel="stylesheet" href="stylesheets (CSS)/normalize.css" />
+    <link rel="stylesheet" href="stylesheets (CSS)/hangManGame.css" />
+    <link rel="icon" href="media/images/theDungeonsLogo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>PLAYING GAME</title>
+  </head>
+  <body>
+    <div class="hidden_mQuery_alert">
+      <h1 class="hidden__title">Make Sure to Rotate your Screen!</h1>
+      <i class="fa-solid fa-arrows-rotate"></i>
+    </div>
+    <div class="container">
+      <div class="center_btn_canvas">
+        <a href="hangManGame.html" class="new_btn game_btn" target="_self"
+          >New Game</a
+        >
+        <canvas class="game_canvas" width="900" height="600"></canvas>
+        <a href="index.html" class="desist_btn game_btn">Desist</a>
+      </div>
+      <div class="show_win_message" id="win-message">
+        <img
+          id="win-img"
+          class="win_img"
+          src="media/images/winner-img.png"
+          alt="win message"
+        />
+        <audio
+          id="winner-sound-effect"
+          src="media/sound-Effects/Winner Sound Effects_320kbps.mp3"
+        ></audio>
+      </div>
+      <div class="show_lose_message" id="lose-message">
+        <img
+          id="lose-img"
+          class="lose_img"
+          src="media/images/game-over-img.png"
+          alt="lose message"
+        />
+        <audio
+          id="lose-sound-effect"
+          src="media/sound-Effects/Fail Sound Effect_320kbps.mp3"
+        ></audio>
+      </div>
+      <progress
+        class="restarting_progress_bar"
+        id="restarting-progressBar"
+        value="0"
+        max="7"
+      ></progress>
+      <div class="to_show_lives">
+        <code id="show-remaining-lives"></code>
+      </div>
+      <div class="to_show_correct_caracs">
+        <code class="correct_caracs" id="show-correct-caracs"></code>
+      </div>
+      <div class="to_show_incorrect_caracs">
+        <code class="incorrect_caracs" id="show-incorrect-caracs"></code>
+      </div>
+    </div>
+    <audio
+      id="background-music"
+      src="media/sound-Effects/Medieval Music(Background-music)_320kbps.mp3"
+      class="bg-music"
+    ></audio>
+    <footer class="footer">
+      ©Made by
+      <h6 class="author-name">Emanuel ITurres</h6>
+    </footer>
+    <script type="text/javascript" src="scripts/hangManGame.js"></script>
+  </body>
+</html>
