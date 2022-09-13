@@ -5,12 +5,14 @@ let userWordForTest = userWord.toString(); //for testing in compareCaracs();//
 sessionStorage.clear(); //will clear it from application once passed//
 /**ABOVE --- STORAGE OF USER WORD**/
 
+/**BELOW --- COLORS FOR CANVAS*/
 const ROPE_COLOR = ["#b9820b", "#ffaa0f", "#450102"];
 const HANGING_BEAM = "#ac522f";
 const HANGING_BEAM_SHADOW = "#600002";
 const HANGMAN_BODY_COLOR = "#e8a699";
 const DUNGEON_BROWN = "#5e1911";
 const DUNGEON_ORANGE = "#ffaa0f";
+/**ABOVE --- COLORS FOR CANVAS*/
 
 /**BELOW --- SOUND EFFECTS*/
 const $winnerSound = document.querySelector("#winner-sound-effect");
