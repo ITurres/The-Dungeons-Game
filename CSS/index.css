@@ -176,7 +176,8 @@ body {
     animation: fontAwesome-rotation 2s infinite ease-in-out;
   }
 
-  .game__btn {
+  .game_btns_holder,
+  .game_image_holder {
     display: none;
   }
 }

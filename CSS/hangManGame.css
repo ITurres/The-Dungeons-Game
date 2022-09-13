@@ -267,7 +267,7 @@ code.incorrect_caracs {
     animation: fontAwesome-rotation 2s infinite ease-in-out;
   }
 
-  .game_btn {
+  .center_btn_canvas {
     display: none;
   }
 }

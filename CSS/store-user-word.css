@@ -208,7 +208,8 @@ body {
     animation: fontAwesome-rotation 2s infinite ease-in-out;
   }
 
-  .game__btn {
+  .btn_holder,
+  .txt_figC_container {
     display: none;
   }
 }
