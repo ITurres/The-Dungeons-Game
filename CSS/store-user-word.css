@@ -55,7 +55,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: url(/media/images/dungeon-door-for-own-word-2.jpg);
+  background: url("../media/images/dungeon-door-for-own-word-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
