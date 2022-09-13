@@ -266,4 +266,8 @@ code.incorrect_caracs {
     font-size: 4rem;
     animation: fontAwesome-rotation 2s infinite ease-in-out;
   }
+
+  .game_btn {
+    display: none;
+  }
 }
