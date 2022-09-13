@@ -122,7 +122,7 @@ body {
   margin: 0 0 1rem 0;
 }
 
-.game_btn {
+.game__btn {
   display: inline-block;
   text-decoration: none;
   font-size: 1.5rem;
@@ -134,7 +134,7 @@ body {
   transition: 0.5s all; /*for hover*/
 }
 
-.game_btn:hover {
+.game__btn:hover {
   background: var(--dungeon-deepBlue);
   color: var(--dungeon-lightBlue);
   transform: scale(1.1);
@@ -206,5 +206,9 @@ body {
   .fa-arrows-rotate {
     font-size: 4rem;
     animation: fontAwesome-rotation 2s infinite ease-in-out;
+  }
+
+  .game__btn {
+    display: none;
   }
 }

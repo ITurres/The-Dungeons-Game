@@ -175,4 +175,8 @@ body {
     font-size: 4rem;
     animation: fontAwesome-rotation 2s infinite ease-in-out;
   }
+
+  .game__btn {
+    display: none;
+  }
 }
