@@ -207,6 +207,35 @@ code.incorrect_caracs {
   color: var(--dungeon-darkSeaGreen);
 }
 
+/*BELOW --- BUILT-IN KEYBOARD STYLES*/
+
+.built_in_keyboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  /* gap: 1rem; */ /*not supported on iOS <= 10.2*/
+}
+
+/*in-case GAP is not supported*/
+.row + .row {
+  margin-top: 1rem;
+}
+/*in-case GAP is not supported*/
+
+.built_in_key {
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  width: 5rem; /*so all have same size (case for thin caracs e.g: i)*/
+  border: none;
+  color: var(--dungeon-darkSeaGreen);
+  background-color: var(--dungeon-lightGray);
+}
+
+/*ABOVE --- BUILT-IN KEYBOARD STYLES*/
+
 .footer {
   text-align: center;
   font-size: 1rem;
@@ -223,6 +252,20 @@ code.incorrect_caracs {
 
 /*MEDIA QUERIES*/
 
+@media screen and (max-width: 2020px) {
+  .built_in_keyboard {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .built_in_keyboard {
+    display: flex;
+    visibility: visible;
+  }
+}
+
 @media (max-width: 1200px) {
   .game_canvas {
     width: 70%;
@@ -234,6 +277,10 @@ code.incorrect_caracs {
 
   code.incorrect_caracs {
     font-size: 3.5rem;
+  }
+  .built_in_keyboard {
+    display: flex;
+    visibility: visible;
   }
 }
 
@@ -269,5 +316,14 @@ code.incorrect_caracs {
 
   .center_btn_canvas {
     display: none;
+  }
+
+  .to_show_incorrect_caracs {
+    display: none;
+  }
+
+  .built_in_keyboard {
+    display: none;
+    visibility: hidden;
   }
 }
