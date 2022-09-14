@@ -171,6 +171,7 @@ progress::-webkit-progress-value {
   border-radius: 0 0 2rem 2rem;
   border: 4px solid var(--dungeon-lightGray);
   position: absolute;
+  z-index: -3; /*places it behind CANVAS*/
   bottom: 40%;
   left: 21%;
 }
