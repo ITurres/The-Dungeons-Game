@@ -47,6 +47,13 @@ function caracTesting(charCode, keyValue) {
 }
 //**ABOVE --- CHECKS KEYBOARD ENTRY VALUES */
 
+//**BELOW --- CHECKS ON-SCREEN - BUILT-IN KEYBOARD ENTRY VALUES */
+function builtInKeyBoard_value(id) {
+  keyValue = document.querySelector(id).value;
+  return compareCaracs(keyValue);
+}
+//**ABOVE --- CHECKS ON-SCREEN - BUILT-IN KEYBOARD ENTRY VALUES */
+
 function aleatoryWord() {
   let secretWords = [
     "TOY",
